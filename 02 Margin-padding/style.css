@@ -5,7 +5,7 @@
 }
 
 .container{
-    background-color: rgb(183, 48, 224);
+    background-color: lightgray;
     width: 950px;
     /* height: 600px; */
     margin: 0 auto;   /* centra horizontalmente dentro de su contenedor */
@@ -16,7 +16,7 @@
 .top-nav{
     width: 100%; /* ancho total de la pantalla */
     height: 150px;
-    background-color: rgb(153, 0, 255);
+    background-color: green;
 }
 
 .main{
@@ -25,7 +25,7 @@
 }
 
 .left{
-    background-color: rgb(77, 10, 122);
+    background-color: blue;
     height: 300px;
     flex: 1;
     margin: 0px 20px 0px 0px;
@@ -33,7 +33,7 @@
 
 .right{
 
-    background-color: rgb(49, 6, 66);
+    background-color: red;
     height: 400px;
     flex: 3;
 }
@@ -47,7 +47,7 @@
 
 .yellow{
     flex: 1;
-    background-color: rgb(140, 91, 185);
+    background-color: yellow;
 }
 .row2{
     margin: 0px 20px 0px 20px;
