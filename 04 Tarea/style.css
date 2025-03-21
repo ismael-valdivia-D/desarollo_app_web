@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: solid 1px greenyellow;
+}
+
+.container{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.myCloud{
+    background-color: black;
+    height: 80px;
+    width: 750px;
+    margin: 40px 10px 0px 20px ;
+    text-align: start;
+}
+
+
