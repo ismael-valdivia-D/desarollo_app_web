@@ -1,23 +1,39 @@
 *{
-    margin: 0;
+    margin: 5px;
     padding: 0;
-    outline: solid 1px greenyellow;
+    /*outline: solid 1px greenyellow;*/
+    font-style: italic;
 }
-
-.container{
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    width: 800px;
-    height: 800px;
-    margin: 0 auto;
-}
-
 .myCloud{
     background-color: black;
-    height: 80px;
-    width: 750px;
-    margin: 40px 10px 0px 20px ;
+    height: 100px;
+    width: 850px;
     text-align: start;
+    align-content: center;
+    color:white;
+    font-size: 30px;
+}
+span{
+    color:aqua;
 }
 
+.purple{
+    background-color: rgb(102,51,153);
+    height: 50px;
+    width: 850px;
+    align-content: center;
+    text-align: center; ;
+    color:white;
+    font-size: 15px;
+}
+
+.contact{
+    background-color: #9fc5f8;
+    height: 50px;
+    width: 850px;
+    text-align: end;
+    align-content: end;
+    font-size: 15px;
+    text-decoration: underline;
+}
 
