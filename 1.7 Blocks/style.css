@@ -1,0 +1,22 @@
+*{
+    outline: solid 1px greenyellow;
+margin: 10px;
+}
+
+.cian{
+    width: 464px;
+    height: 120px;
+    background-color:#58c4ea ;
+}
+
+.rose{
+    width: 464px;
+    height: 120px;
+    background-color:#d1a5b7 ;
+}
+
+.white{
+    width: 464px;
+    height: 120px;
+    background-color:#fcfcff ;
+}
