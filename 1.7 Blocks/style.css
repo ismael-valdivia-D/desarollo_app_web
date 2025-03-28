@@ -1,22 +1,67 @@
 *{
-    outline: solid 1px greenyellow;
-margin: 10px;
+    /* outline: solid 1px greenyellow; */
+    margin: 10px;
+    background-color: #f1f8fa;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.text{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
 .cian{
-    width: 464px;
-    height: 120px;
+    width: 400px;
+    height: 130px;
     background-color:#58c4ea ;
+    display: flex;
+    justify-content: space-between;
 }
 
 .rose{
-    width: 464px;
-    height: 120px;
+    width: 400px;
+    height: 130px;
     background-color:#d1a5b7 ;
+    justify-content: space-evenly;
+    display: flex;
 }
 
 .white{
-    width: 464px;
-    height: 120px;
+    width: 400px;
+    height: 130px;
     background-color:#fcfcff ;
+    display: flex;
+    justify-content: space-between;
 }
+
+.purple{
+    width: 400px;
+    height: 130px;
+    background-color:#4a0cad ;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.red{
+    width: 400px;  
+    height: 130px;
+    background-color: crimson;
+}
+
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+.text_1{
+    text-align: center;
+    font-size: 10px;
+}
+
+
