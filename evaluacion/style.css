@@ -1,6 +1,6 @@
 *{
     /*outline: solid 1px greenyellow;*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /* cambia el tipo de caligrafia de la letra  */
 }
 
 
@@ -10,29 +10,28 @@
     display: flex;
 }
 .rigth{
-    height: 100%;
+    height: 100%;  /* ajustar el tamaño predeterminado de la pagina donde iran todas las particiones echas en el index*/
     width: 1550px;
     display: flex;
-    flex-flow: column;
+    flex-flow: column;/* ordena toda la informacion en columnas  */
 }
 
 .top{
     width: 100%;
     height: 200px;
-    text-align: center;
-    
+    text-align: center; /* ordena el texto puesto en el centro de esta seccion  */
 }
 
 .txt3{
     color:#9a97a9 ;
-    margin-top: -20px;
-    font-size: 25px;
+    margin-top: -20px; /* añade un margen en la parte superior de la seccion u texto */
+    font-size: 25px; /* ajusta el tamaño de el texto puesto */
 }
 
 .txt2{
     font-size: 30px;
     margin-top: -65px;
-    color: #a19eaa;
+    color: #a19eaa; /* ajusta el color de el texto  */
 }
 
 .txt1{
@@ -50,7 +49,7 @@
     height: 500px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* la informacion estara ordenada con un espacio entre cada una  */
     margin-top: 125px;
     padding: 20px;
 }
@@ -75,7 +74,7 @@
 .medio{
     width: 100%;
     height: 310px;
-    padding: 10px;
+    padding: 10px; /* añade un espacio interior respectivo a la seccion ya puesta  */
 
 }
 
@@ -87,7 +86,7 @@
 }
 
 .tit{
-    color: #332e54;
+    color: #332e54;/* ajusta el color de el texto  */
     font-size: 37px;
     font-weight: 200;
 }
