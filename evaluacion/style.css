@@ -11,7 +11,7 @@
 }
 .rigth{
     height: 100%;
-    width: 100%;
+    width: 1550px;
     display: flex;
     flex-flow: column;
 }
@@ -26,7 +26,7 @@
 .txt3{
     color:#9a97a9 ;
     margin-top: -20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .txt2{
@@ -51,12 +51,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 130px;
-    padding: 10px;
+    margin-top: 125px;
+    padding: 20px;
 }
 
 .imagenes{
-    width: 320px;
+    width: 100%;
     height: 300px;
 }
 
