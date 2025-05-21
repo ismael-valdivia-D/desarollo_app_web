@@ -15,7 +15,7 @@
     flex-direction: column;
     display: flex;
 }
-.recChico{
+.Chico{
     flex-direction: column;
     padding: 20px;
     background-color: #ffffff ; 
@@ -29,7 +29,7 @@
     justify-content: space-between;
 
 }
-.cuadrado2{
+.cuadrado{
     padding: 20px;
     /* padding: 0px 60px 60px 60px; */
     height: 280px;
