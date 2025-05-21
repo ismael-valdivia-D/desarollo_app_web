@@ -15,7 +15,7 @@ let und;
 
 let Null = null;
 
-   // Variable INT (Número Entero)
+    // Variable INT (Número Entero)
 
 function numeroEntero(){
     return "Variable Numerica: "+ num;
@@ -26,34 +26,36 @@ function numeroEntero(){
     }
 
     function numeroString(){
-        return "Variable String"+ txt
+        return "Variable String: "+ txt
     }
 
     function numeroBooleano(){
-        return "Variable Booleano"+ Bool
+        return "Variable Booleano: "+ Bool
     }
 
     function numeroArryse(){
-        return "Variable Arryse"+ arry
+        return "Variable Arryse: "+ arry
     }
 
     function numeroObject(){
-        return "Variable Object"+ obj
+        return "Variable Object: "+ obj.nombre + ", " + obj.edad; 
     }
 
     function numeroUndefined(){
-        return "variable undefined"+ und
+        return "Variable Undefined: "+ und
     }
 
 function numeroNull(){
-    return"variable  undefinded"+ Null
+    return "Variable Null: "+ Null
 }
-
-
 
 // Impresíon en consola
 
 console.log(numeroEntero())
 console.log(numeroDecimal())
 console.log(numeroString())
-console.log()
+console.log(numeroBooleano())
+console.log(numeroArryse())
+console.log(numeroObject())
+console.log(numeroUndefined())
+console.log(numeroNull())
