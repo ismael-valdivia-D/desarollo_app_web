@@ -1,0 +1,232 @@
+Apuntes: Explorando los Tipos de Datos en JavaScript
+Objetivo Central: Entender y practicar los diferentes tipos de datos en JavaScript, utilizando variables, funciones y la consola del navegador para visualizarlos.
+
+Pasos Clave de la Actividad:
+Configuración Inicial:
+
+Usar un editor de texto (ej. Visual Studio Code).
+Crear dos archivos: script.js (para el código JavaScript) e index.html (para el HTML que carga el JS).
+Declaración de Variables (script.js):
+
+Declarar variables para cada tipo de dato básico de JavaScript.
+Usar let o const apropiadamente.
+Tipos de datos a declarar:
+numeroEntero (Number)
+numeroDecimal (Number)
+cadenaTexto (String)
+valorBooleano (Boolean)
+arregloNumeros (Array)
+objetoPersona (Object)
+valorIndefinido (Undefined)
+valorNulo (Null)
+identificadorUnico (Symbol)
+numeroGrande (BigInt)
+Declarar una constante: const mes = "Mayo";
+Funciones para Mostrar Tipos de Datos (script.js):
+
+Crear una función separada por cada variable declarada en el Paso 2.
+Cada función debe usar console.log() para mostrar el nombre de la variable y su valor en la consola.
+Ejemplo:
+JavaScript
+
+function mostrarNumeroEntero() {
+    console.log("Número Entero:", numeroEntero);
+}
+Función operacion (script.js):
+
+Crear una función llamada operacion.
+Debe recibir dos parámetros numéricos.
+Realizar una suma y devolver el resultado.
+Ejemplo:
+JavaScript
+
+function operacion(a, b) {
+    return a + b;
+}
+Importante: Mostrar el resultado de operacion también usando console.log().
+Ejecución de Funciones (script.js):
+
+Al final del archivo script.js, llamar a todas las funciones creadas en los Pasos 3 y 4. Esto asegura que se ejecuten y muestren sus resultados en la consola cuando el script se cargue.
+Estructura HTML (index.html):
+
+Crear un archivo index.html con una estructura HTML básica.
+Enlazar script.js justo antes de la etiqueta de cierre </body> usando <script src="script.js"></script>. Esto es crucial para que el navegador ejecute tu código JavaScript.
+Contenido mínimo:
+HTML
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Datos en JavaScript</title>
+</head>
+<body>
+    <h1>Revisa la consola del navegador</h1>
+    <script src="script.js"></script>
+</body>
+</html>
+Ejecución y Verificación:
+
+Abrir index.html en un navegador web.
+Abrir la consola del navegador (generalmente con F12 o clic derecho > "Inspeccionar" > pestaña "Consola").
+Verificar que todos los valores y resultados se impriman correctamente.
+Aprendizaje Clave:
+Identificación de Tipos de Datos: Reconocer cómo se declaran y qué representan los tipos de datos fundamentales en JavaScript.
+Uso de Variables: Entender la diferencia entre let (variable reasignable) y const (constante, valor fijo).
+Funciones en JavaScript: Crear y llamar funciones para organizar y ejecutar código.
+console.log(): Herramienta esencial para depurar y visualizar información en el desarrollo web.
+Conexión HTML y JavaScript: Cómo un archivo HTML carga y ejecuta un script JavaScript externo.
+Esta actividad proporciona una base sólida para entender cómo JavaScript maneja y opera con la información.
+
+
+ARREGLOS
+En Java, un arreglo (array) es una estructura de datos que te permite almacenar una colección de elementos del mismo tipo en una sola variable. Es como una secuencia de "cajas" contiguas en la memoria, donde cada caja puede guardar un valor del mismo tipo y se accede a ella mediante un número de índice.
+
+Qué son los Métodos (Funciones) en Java?
+Un método es un bloque de código que contiene una serie de instrucciones para realizar una tarea particular. Piensa en ellos como las "acciones" o "comportamientos" que pueden tener los objetos de una clase.
+
+Características Clave de los Métodos en Java:
+Pertenecen a Clases: A diferencia de otros lenguajes donde puedes tener funciones "sueltas", en Java, cada método debe estar definido dentro de una clase. Son una parte fundamental de la programación orientada a objetos (POO) en Java.
+Reutilización de Código: Permiten escribir un bloque de código una vez y usarlo múltiples veces desde diferentes partes de tu programa, o incluso en diferentes programas. Esto reduce la redundancia y hace el código más fácil de mantener.
+Modularidad: Dividen un programa grande en tareas más pequeñas y manejables, lo que mejora la organización, la legibilidad y la depuración del código.
+Parámetros y Valores de Retorno:
+Pueden aceptar parámetros (también llamados argumentos), que son valores de entrada que el método necesita para realizar su tarea.
+Pueden devolver un valor como resultado de su ejecución. Si un método no devuelve nada, se especifica void como su tipo de retorno.
+
+
+🟡 Introducción a JavaScript
+JavaScript es un lenguaje de programación que se utiliza principalmente para crear páginas web interactivas y dinámicas.
+ ¿Has hecho clic en un botón y cambió algo en la página? ¡Probablemente fue gracias a JavaScript!
+📍 ¿Dónde funciona JavaScript?
+En el navegador (como Chrome o Firefox).
+
+
+En el servidor, gracias a plataformas como Node.js.
+
+
+✅ Es un lenguaje versátil, ligero y compatible con la mayoría de los navegadores modernos.
+
+🟠 Tipos de Datos en JavaScript
+En JavaScript, todo lo que usamos tiene un tipo de dato. Estos se dividen en:
+🔹 Primitivos (los más básicos):
+string: Texto entre comillas.
+ Ejemplo: "Hola mundo"
+
+
+number: Números, ya sean enteros o con decimales.
+ Ejemplo: 42, 3.14
+
+
+boolean: Solo puede ser verdadero o falso.
+ Ejemplo: true, false
+
+
+undefined: Una variable declarada pero sin valor.
+ Ejemplo: let x;
+
+
+null: Representa una ausencia intencional de valor.
+ Ejemplo: let y = null;
+
+
+symbol: Crea un identificador único.
+ ➕ Ejemplo:
+
+ js
+
+const id1 = Symbol("id");
+const id2 = Symbol("id");
+console.log(id1 === id2); // false
+ Aunque ambos dicen "id", son completamente diferentes y únicos.
+
+ 🔐 También puede usarse como clave en un objeto:
+
+ js
+
+const ID = Symbol("id");
+let usuario = {
+  nombre: "Ana",
+  [ID]: 1234
+};
+console.log(usuario[ID]); // 1234
+bigint: Números muy grandes.
+ Ejemplo: BigInt(9007199254740991)
+
+
+
+🔸 Objetos (más complejos):
+Array: Lista ordenada de valores.
+ Ejemplo: [1, 2, 3]
+
+
+Object: Grupo de datos con nombre (clave) y valor.
+ Ejemplo:
+
+ js
+
+let persona = {
+  nombre: "Juan",
+  edad: 30
+};
+
+
+Function: Bloque de código que se puede reutilizar.
+ Ejemplo:
+
+ js
+
+function saludar() {
+  console.log("Hola, mundo");
+}
+
+
+
+🟢 ¿Por qué es importante JavaScript?
+JavaScript es una pieza clave del desarrollo web moderno:
+🎯 Agrega interactividad (botones, animaciones, validaciones).
+
+
+🔄 Permite actualizar partes de la página sin recargarla completa.
+
+
+🌐 Funciona en todos los navegadores actuales.
+
+
+🛠 Tiene muchas bibliotecas y frameworks populares: React, Vue, Angular.
+
+
+🌍 Sirve tanto en el cliente (navegador) como en el servidor (Node.js).
+
+
+
+🔵 Variables y Constantes
+Para guardar valores, usamos variables o constantes.
+✅ var, let y const
+Palabra clave
+¿Se puede cambiar?
+¿Se puede redeclarar?
+Ámbito
+var
+✅ Sí
+✅ Sí
+Función
+let
+✅ Sí
+❌ No
+Bloque
+const
+❌ No
+❌ No
+Bloque
+
+Ejemplos:
+js
+
+var nombre = "Carlos";     // Antiguo, no recomendado
+let edad = 25;             // Recomendado para datos que cambian
+const PI = 3.1416;         // Para valores que no deben cambiar
+
+
+Con esta base, ya estás listo para escribir tus primeras líneas en JavaScript y comenzar a hacer páginas web más vivas y funcionales.
+
+
