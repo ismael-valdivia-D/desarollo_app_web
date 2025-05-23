@@ -1,0 +1,40 @@
+*{
+    outline: solid 1px #ff0000;
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    height: 800px;
+    width: 500px;
+    display: flex;
+    background-color: #e6e6e6 ;
+    padding: 20px;
+    flex-flow: column;
+}
+
+.arriba{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+.izq{
+    flex: 5;
+    width: 100%;
+    height: 60%;
+    margin-right: 20px;
+}
+
+
+.abajo{
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
