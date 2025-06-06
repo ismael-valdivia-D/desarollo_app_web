@@ -24,12 +24,22 @@ function usarShift(){
         alert(`Elemento eliminado: ${basurero}`);
 }
 
+
+/*
+🧠 Ejercicio 1: Agregar elementos
+Crea un arreglo vacío llamado compras.
+Usa push() para agregar los siguientes elementos: "pan", "leche" y "huevos".
+Muestra el arreglo resultante.
+*/
+
 let compras =[]; //arreglo vacio
 
 function listaCompras(){
     compras.push("pan",'leche','huevos')
     alert(`Lista de compras: ${compras.join(" - ")}`)
 }
+
+
 
 // 🧠 Ejercicio 2: Quitar el último
 // A partir del arreglo anterior (compras), utiliza pop() para quitar el último producto.
