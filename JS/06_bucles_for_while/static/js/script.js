@@ -59,3 +59,16 @@ function mostrarPares() {
 Pide un número al usuario y, usando un while, cuenta regresivamente hasta 0. Si el número es menor que 0, muestra "Número no válido".
 */
 
+let numero=parseInt(prompt("Ingrese un número entero positivo para el contador regresivo:"));
+while (numero >= 0) {
+    alert(numero);
+    document.getElementById("resultado4").innerHTML =
+        `<p>Contador regresivo: ${numero}</p>`;
+}
+
+/*
+✅ Ejercicio 5: Mostrar la tabla de multiplicar de un número
+Solicita al usuario un número y usa un for para mostrar su tabla de multiplicar del 1 al 10.
+*/
+
+  
