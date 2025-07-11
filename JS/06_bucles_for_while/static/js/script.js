@@ -71,4 +71,122 @@ while (numero >= 0) {
 Solicita al usuario un número y usa un for para mostrar su tabla de multiplicar del 1 al 10.
 */
 
-  
+function tablaMultiplicar() {
+    let resultado = "";
+    let numero = parseInt(prompt("Ingrese un número para mostrar su tabla de multiplicar:"));
+    for (let i = 1; i <= 10; i++) {
+        let mult = numero * i;
+        resultado += `${numero} x ${i} = ${mult}<br>`;
+    }
+    document.getElementById("resultado5").innerHTML =
+        `<p>Tabla de multiplicar del ${numero}:</p><p>${resultado}</p>`;
+    }
+
+/*
+✅ Ejercicio 6: Sumar hasta que se ingrese cero
+Con while, sigue pidiendo números con prompt() y súmalos, hasta que el usuario escriba 0. Muestra el total acumulado.
+*/
+function sumarHastaCero() {
+    let suma = 0;
+    let numero;
+    sumaAcumulada = [];
+    do {
+        numero = parseFloat(prompt("Ingrese un número para sumar (0 para terminar):"));
+        if (!isNaN(numero)) {
+            suma += numero;
+            sumaAcumulada.push(numero);
+        } else {
+            alert("Por favor, ingrese un número válido.");
+        }
+    } while (numero !== 0); 
+    document.getElementById("resultado6").innerHTML =
+        `<p>Total acumulado: ${suma}</p><p>Números ingresados: ${sumaAcumulada.join(", ")}</p>`;+
+
+}
+/*
+✅ Ejercicio 7: Mostrar letras de una palabra
+Pide al usuario una palabra y usa un for para mostrar cada letra por separado en el HTML.
+*/
+function mostrarLetras() {
+    let palabra = prompt("Ingrese una palabra:");
+    let letras = [];
+    for (let i = 0; i < palabra.length; i++) {
+        letras.push(palabra[i]);
+    }
+    document.getElementById("resultado7").innerHTML =
+        `<p>Letras de la palabra "${palabra}": ${letras.join(", ")}</p>`;
+}
+
+/*
+✅ Ejercicio 8: Validar contraseña
+Pide una contraseña al usuario y sigue pidiendo con while hasta que escriba "admin123". Luego, muestra "Acceso concedido".
+*/
+function validarContrasena() {
+    let contrasena;
+    do {
+        contrasena = prompt("Ingrese la contraseña:");
+        if (contrasena === "admin123") {
+            document.getElementById("resultado8").innerHTML =
+                `<p>Acceso concedido.</p>`;
+        } else {
+            alert("Contraseña incorrecta. Inténtelo de nuevo.");
+        }
+    } while (contrasena !== "admin123");
+}
+
+/*
+✅ Ejercicio 9: Promedio de notas
+Pide con prompt() cuántas notas va a ingresar. Usa un for para pedir cada nota, calcula el promedio y lo muestra.
+*/
+function promedioNotas() {
+    let cantidad = parseInt(prompt("¿Cuántas notas va a ingresar?"));
+    if (isNaN(cantidad) || cantidad <= 0) {
+        document.getElementById("resultado9").innerHTML =
+            `<p>Error: Debe ingresar un número entero positivo.</p>`;
+        return;
+    }
+    
+    let suma = 0;
+    for (let i = 1; i <= cantidad; i++) {
+        let nota = parseFloat(prompt(`Ingrese la nota ${i}:`));
+        if (!isNaN(nota)) {
+            suma += nota;
+        } else {
+            alert("Por favor, ingrese una nota válida.");
+            i--; // Repetir la iteración si la nota no es válida
+        }
+    }
+    
+    let promedio = suma / cantidad;
+    document.getElementById("resultado9").innerHTML =
+        `<p>El promedio de las notas es: ${promedio.toFixed(2)}</p>`;
+}
+
+/*
+✅ Ejercicio 10: Contar cuántos son mayores de edad
+Pide con prompt() cuántas personas vas a ingresar. Por cada persona, pide la edad y muestra al final cuántas son mayores de edad (18+).
+*/
+function contarMayoresEdad() {
+    let cantidad = parseInt(prompt("¿Cuántas personas va a ingresar?"));
+    if (isNaN(cantidad) || cantidad <= 0) {
+        document.getElementById("resultado10").innerHTML =
+            `<p>Error: Debe ingresar un número entero positivo.</p>`;
+        return;
+    }
+    
+    let mayoresEdad = 0;
+    for (let i = 1; i <= cantidad; i++) {
+        let edad = parseInt(prompt(`Ingrese la edad de la persona ${i}:`));
+        if (!isNaN(edad)) {
+            if (edad >= 18) {
+                mayoresEdad++;
+            }
+        } else {
+            alert("Por favor, ingrese una edad válida.");
+            i--; // Repetir la iteración si la edad no es válida
+        }
+    }
+    
+    document.getElementById("resultado10").innerHTML =
+        `<p>El número de personas mayores de edad es: ${mayoresEdad}</p>`;
+}
