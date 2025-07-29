@@ -1,0 +1,398 @@
+Ejercicio 5
+/*✅ Ejercicio 5: Mostrar la tabla de multiplicar de
+un número. Solicita al usuario un número y
+usa un for para mostrar su  tabla de
+multiplicar del 1 al 10. */
+
+
+function mostrarTablaMultiplicar(){
+    let resultado = "";
+    let numero = parseInt(prompt("Ingrese número para trabajar: "));
+    for(let i = 1; i <= 10; i++){
+        let mult = numero * i;
+        resultado += `<p>${numero} x ${i} = ${mult}</p>`;
+    }
+    document.getElementById("resultado5").innerHTML = resultado;
+}
+Simulación: 
+numero→: 5
+
+Variables
+Valores
+resultado 
+"", `<p>5 x 1 = 5</p>`,`<p>5 x 1 = 5</p><p>5 x 2 = 10</p>`, `<p>5 x 1 = 5</p><p>5 x 2 = 10</p><p>5 x 3 = 10</p>`------>
+`<p>5 x 1 = 5</p><p>5 x 2 = 10</p><p>5 x 3 = 10</p`> `<p>5 x 1 = 5</p><p>5 x 2 = 10</p><p>5 x 3 = 10</p`> `<p>5 x 1 = 5</p><p>5 x 2 = 10</p><p>5 x 3 = 10</p`><p>5 x 10 = 50</p`> 
+numero 
+5
+i
+1, 2, 3, 4, 5 ,6,7,8,9,10,11
+mult 
+5, 10
+
+
+mostrar salidas esperadas:
+
+
+
+
+
+Ejercicio 6:
+let sumaAcumulada = [];
+function sumarHastaCero(){
+    let suma = 0;
+    let numero;
+    sumaAcumulada = [];
+    document.getElementById("resultado6").innerHTML = "";
+    while (true) {
+        numero = parseFloat(prompt("Introduce un número para sumar (0 para terminar)"));
+        if (isNaN(numero)){
+            document.getElementById(resultado6).innerHTML =
+            "<p>Por favor, introduce un número valido.</p>"
+            return
+        }
+        if (numero === 0){
+            break
+        }
+        suma += numero
+        sumaAcumulada.push(numero)
+    }
+    document.getElementById("resultado6").innerHTML =
+    `<p>Números sumados: <strong>${sumaAcumulada.join(", ")}
+    </strong><br>Total acumulado: <strong>${suma}</strong></p>`
+}
+Diagrama en T: Representación gráfica de seguimiento de variables.
+
+Simulación: 
+numero → 5, 10, 6, 0 : (Input)Ingreso de valores
+Ejercicio 6:
+Variables
+Valores
+sumaAcumulada 
+[], [5],[5,10],[5,10,6] 
+suma 
+0, 5, 15, 21
+número
+undefined, 5, 10, 6, 0
+
+
+
+
+
+
+mostrar salidas esperadas:
+Números sumados: 5, 10, 6
+Total acumulado: 21
+
+
+Ejercicio 7:
+
+let letrasPalabra = [];
+function mostrarLetras() {
+    let palabra = prompt("Introduce una palabra:");
+    if (!palabra) {
+        document.getElementById("resultado7").innerHTML = "<p>Por favor, introduce una palabra válida.</p>";
+        return;
+    }
+    letrasPalabra = []; // Reiniciar el array letrasPalabra
+    document.getElementById("resultado7").innerHTML = ""; // Limpiar el contenido previo del elemento con id "resultado"
+   
+    for (let i = 0; i < palabra.length; i++) {
+        letrasPalabra.push(palabra[i]);
+    }
+    document.getElementById("resultado7").innerHTML = `<p>Letras de la palabra "${palabra}": <strong>{${letrasPalabra.join(" - ")}}</strong></p>`;
+}
+
+
+Simulación: 
+palabra → parangariturimicuaro: (Input)Ingreso de valores
+
+Variables
+Valores
+letrasPalabra 
+[]
+palabra 
+parangariturimicuaro
+
+
+
+
+
+
+
+
+
+
+mostrar salidas esperadas:
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Genera una cadena con números desde 1 hasta el número dado,
+ * marcando los múltiplos de 4 con un asterisco.
+ * @param {number} numero - El número hasta el cual generar la secuencia.
+ * @returns {string} La cadena de secuencia numérica.
+ */
+function mostrarSecuencia(numero) {
+    if (isNaN(numero) || numero < 1) {
+        return "Por favor, ingresa un número válido mayor o igual a 1.";
+    }
+
+    let secuencia = [];
+    for (let i = 1; i <= numero; i++) {
+        if (i % 4 === 0) {
+            secuencia.push(i + "*");
+        } else {
+            secuencia.push(i);
+        }
+    }
+    return secuencia.join(", ");
+}
+
+/**
+ * Obtiene el número del input, llama a mostrarSecuencia y muestra el resultado en el HTML.
+ */
+function ejecutarMostrarSecuencia() {
+    const numeroInput = document.getElementById("numeroInput");
+    const numero = parseInt(numeroInput.value);
+    const resultadoDiv = document.getElementById("resultado");
+
+    const resultadoSecuencia = mostrarSecuencia(numero);
+    resultadoDiv.textContent = resultadoSecuencia;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Filtra los números divisibles por un múltiplo dado dentro de un límite.
+ *
+ * @param {number} limite El número hasta el cual se buscarán los múltiplos.
+ * @param {number} multiplo El número por el cual deben ser divisibles los números.
+ * @returns {Array<number>} Un arreglo con los números encontrados.
+ */
+function filtrarMultiples(limite, multiplo) {
+    let numerosEncontrados = [];
+    for (let i = 1; i <= limite; i++) {
+        if (i % multiplo === 0) {
+            numerosEncontrados.push(i);
+        }
+    }
+    return numerosEncontrados;
+}
+
+// Pedir el límite y el múltiplo al usuario
+let limite = parseInt(prompt("Ingresa el número límite:"));
+let multiplo = parseInt(prompt("Ingresa el número múltiplo:"));
+
+// Validar que las entradas sean números válidos
+if (isNaN(limite) || isNaN(multiplo)) {
+    console.error("Entrada inválida. Por favor, ingresa números enteros.");
+} else {
+    // Llamar a la función para filtrar los múltiplos
+    let resultado = filtrarMultiples(limite, multiplo);
+
+    // Mostrar el resultado en la consola del navegador
+    if (resultado.length > 0) {
+        console.log("Números encontrados: " + resultado.join(", "));
+        // Optionally, display the result on the webpage (if this is in an HTML file)
+        // document.body.innerHTML += "<p>Números encontrados: " + resultado.join(", ") + "</p>";
+    } else {
+        console.log("No se encontraron números divisibles por " + multiplo + " hasta " + limite + ".");
+        // document.body.innerHTML += "<p>No se encontraron números divisibles por " + multiplo + " hasta " + limite + ".</p>";
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+🌀 Apunte: Bucles en JavaScript – for y while
+🎯 ¿Qué es un bucle?
+Un bucle (o ciclo) permite repetir instrucciones varias veces sin tener que escribir el mismo código muchas veces. Es útil cuando necesitamos hacer tareas repetitivas, como recorrer un arreglo o ejecutar una acción un número determinado de veces.
+
+🔁 1. Bucle for
+✅ ¿Cuándo usarlo?
+Cuando sabemos cuántas veces queremos repetir una acción. Es ideal para recorrer arreglos o repetir tareas con un contador.
+🧱 Estructura
+javascript
+
+for (let i = 0; i < 5; i++) {
+    // Código que se repite
+}
+
+Inicialización: se ejecuta solo una vez, antes de comenzar el ciclo.
+
+
+Condición: si es verdadera, se ejecuta el bloque. Si es falsa, el ciclo termina.
+
+
+Incremento: se ejecuta al final de cada vuelta.
+
+
+🧪 Ejemplo práctico
+Imprimir los números del 1 al 5:
+javascript
+
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+
+🔁 2. Bucle while
+✅ ¿Cuándo usarlo?
+Cuando no sabemos cuántas veces se repetirá el ciclo, y queremos repetir algo mientras se cumpla una condición.
+🧱 Estructura
+javascript
+let i = 1;
+while (i < 5) {
+    // Código que se repite
+i++;
+}
+
+🧪 Ejemplo práctico
+Mostrar un contador hasta que llegue a 3:
+javascript
+
+let contador = 1;
+while (contador <= 3) {
+    console.log("Vuelta " + contador);
+    contador++;
+}
+
+
+❗ Precaución: bucles infinitos
+Un bucle mal definido puede nunca detenerse, lo que hace que el programa se quede "pegado".
+Ejemplo de bucle infinito:
+javascript
+let activo= true;
+while (activo) {
+    // Esto se repite para siempre (¡peligroso!)
+activo = false;
+}
+
+
+📌 Diferencias clave entre for y while
+Característica
+for
+while
+Uso principal
+Repeticiones conocidas
+Condiciones dinámicas
+Estructura compacta
+Sí (todo en una línea)
+No (más dispersa)
+Inicialización
+Dentro del for
+Antes del while
+Incremento
+Dentro del for
+Dentro del bloque manualmente
+
+
+🧠 Consejo Final
+Empieza usando for cuando trabajes con arreglos o necesites repetir algo un número específico de veces. Usa while cuando el fin del ciclo dependa de una condición que no controlas directamente (como entrada de usuario o estados externos).
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+ Apunte: Métodos Fundamentales de Arreglos en JavaScript
+📌 ¿Qué son los métodos de modificación de arreglos?
+Son funciones integradas en JavaScript que permiten agregar o eliminar elementos en los arreglos de forma eficiente. Los métodos más usados son:
+push()
+pop()
+unshift()xx
+shift()
+
+
+
+🔹 push() – Agrega al final del arreglo
+✅ Descripción:
+Agrega uno o más elementos al final del arreglo y devuelve la nueva longitud.
+🔧 Sintaxis:
+javascript
+
+arreglo.push(elemento1, elemento2, ...);
+
+📌 Ejemplo:
+javascript
+
+let frutas = ["manzana", "plátano"];
+frutas.push("naranja");
+console.log(frutas); // ["manzana", "plátano", "naranja"]
+
+✅ Buena práctica:
+Evita hacer frutas[frutas.length] = "nuevo" manualmente. Usa push() para mantener claridad.
+
+🔹 pop() – Elimina el último elemento
+✅ Descripción:
+Elimina el último elemento del arreglo y lo devuelve. Si el arreglo está vacío, devuelve undefined.
+🔧 Sintaxis:
+javascript
+
+let eliminado = arreglo.pop();
+
+📌 Ejemplo:
+javascript
+
+let numeros = [1, 2, 3];
+let ultimo = numeros.pop();
+console.log(numeros); // [1, 2]
+console.log(ultimo);  // 3
+
+✅ Buena práctica:
+Guarda el valor eliminado si necesitas usarlo después.
+
+🔹 unshift() – Agrega al inicio del arreglo
+✅ Descripción:
+Agrega uno o más elementos al inicio del arreglo y devuelve la nueva longitud.
+🔧 Sintaxis:
+javascript
+
+arreglo.unshift(elemento1, elemento2, ...);
+
+
+📌 Ejemplo:
+javascript
+
+let colores = ["verde", "azul"];
+colores.unshift("rojo");
+console.log(colores); // ["rojo", "verde", "azul"]
+
+
+🔹 shift() – Elimina el primer elemento
+✅ Descripción:
+Elimina el primer elemento del arreglo y lo devuelve. Si el arreglo está vacío, devuelve undefined.
+🔧 Sintaxis:
+javascript
+
+let eliminado = arreglo.shift();
+
+📌 Ejemplo:
+javascript
+
+let letras = ["a", "b", "c"];
+let primero = letras.shift();
+console.log(letras);  // ["b", "c"]
+console.log(primero); // "a"
+
+
+🧼 Buenas prácticas generales
+✅ Siempre verifica si el arreglo no está vacío antes de usar pop() o shift() para evitar errores lógicos.
+ ✅ Usa estos métodos en lugar de modificar manualmente índices.
+ ✅ Si necesitas una copia sin modificar el original, usa .slice() antes de aplicar los métodos.
+ ✅ Usa nombres de variables descriptivos (primerElemento, ultimoValor, etc.) para mantener la claridad.
+
+🧪 Mini-ejercicio sugerido
+javascript
+
+let animales = ["perro", "gato"];
+animales.push("conejo");
+animales.unshift("oso");
+let quitado1 = animales.pop();
+let quitado2 = animales.shift();
+console.log(animales);     // ¿Qué elementos quedan?
+console.log(quitado1);     // ¿Cuál fue el último eliminado?
+console.log(quitado2);     // ¿Y el primero?
+
+
+

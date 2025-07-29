@@ -66,13 +66,13 @@ par o impar, y retorne un mensaje con el resultado.
 Muestra ese mensaje al usuario en html.
 */
 
-function parImpar(num) {
+function parImpar(num) 
     if (num % 2 === 0) {
         return `${num} es par`
     } else {
         return `${num} es impar`
     }
-};
+
 
 function mostrarParImpar() {
     let input1 = document.getElementById("input30").value;
