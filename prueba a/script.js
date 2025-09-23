@@ -12,7 +12,7 @@ Si el usuario ingresa 10, el resultado debe ser:
 1, 3, 5, 7, 9
 
 ----------------------------------------------------------------------------------------------------------------------------------*/
-function calcularImpar() {
+function  () {
     // Captura el valor del input y lo convierte a un número entero
     let input1 = document.getElementById("input1").value;
     let n = parseInt(input1);

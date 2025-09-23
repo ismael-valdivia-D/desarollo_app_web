@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dojionary</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="header">
+    <div class="logo">Dojionary</div>
+    <input type="text" class="search-bar" placeholder="Search" />
+    <button id="loginBtn" class="login-btn">Login</button>
+</div>
+
+<div class="container">
+<div class="definitions-list">
+    <!-- First definition -->
+    <div class="definition-card">
+    <div class="word">ninja</div>
+    <div class="part-of-speech">noun</div>
+    <div class="plural">Plural: ninjas</div>
+    <div class="definition">
+        A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a>
+    </div>
+    <button class="like-btn" data-likes="13">13 likes</button>
+    </div>
+    <!-- Second definition -->
+    <div class="definition-card">
+    <div class="word">ninja</div>
+    <div class="part-of-speech">noun</div>
+    <div class="plural">Plural: ninjas</div>
+    <div class="definition">
+        A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus
+    </div>
+    <button class="like-btn" data-likes="37">37 likes</button>
+    </div>
+</div>
+<div class="right-panel">
+    <div class="definition-card">
+    <div class="panel-title">Dojionary is defined by YOU</div>
+    <button id="addDefBtn" class="add-definition">Add Definition</button>
+    </div>
+</div>
+</div>
+
+<div class="footer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

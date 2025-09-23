@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Estudiante</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-user-graduate"></i> Registro de Estudiante</h1>
+
+    <form id="studentForm">
+      <!-- Nombre -->
+      <label for="name"><i class="fas fa-signature"></i> Nombre:</label>
+      <input type="text" id="name" required minlength="2" placeholder="Ej: Juan Pérez" />
+
+      <!-- Edad -->
+      <label for="age"><i class="fas fa-birthday-cake"></i> Edad:</label>
+      <input type="number" id="age" min="14" max="100" required placeholder="14 - 100 años" />
+
+      <!-- Curso -->
+      <label for="course"><i class="fas fa-book"></i> Curso:</label>
+      <select id="course" required>
+        <option value="" disabled selected>Selecciona un curso</option>
+        <option value="3° Medio">3° Medio</option>
+        <option value="4° Medio">4° Medio</option>
+      </select>
+
+      <!-- Jornada -->
+      <label><i class="fas fa-clock"></i> Jornada:</label>
+      <div class="radio-group">
+        <input type="radio" id="morning" name="shift" value="Mañana" required />
+        <label for="morning">Mañana</label>
+
+        <input type="radio" id="afternoon" name="shift" value="Tarde" />
+        <label for="afternoon">Tarde</label>
+      </div>
+
+      <!-- Aceptación reglamento -->
+      <div class="checkbox-group">
+        <input type="checkbox" id="acceptRules" required />
+        <label for="acceptRules">Acepto el reglamento</label>
+      </div>
+
+      <!-- Botones -->
+      <div class="button-group">
+        <button type="submit"><i class="fas fa-plus-circle"></i> Registrar</button>
+        <button type="button" id="clearBtn"><i class="fas fa-trash"></i> Limpiar</button>
+      </div>
+    </form>
+
+    <!-- Mensajes -->
+    <p class="error" aria-live="polite"></p>
+    <p class="resultado" aria-live="polite"></p>
+
+    <!-- Botón de tema -->
+    <button id="themeToggle" class="theme-btn"><i class="fas fa-moon"></i> Modo Oscuro</button>
+  </div>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>
