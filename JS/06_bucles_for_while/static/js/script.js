@@ -59,11 +59,20 @@ function mostrarPares() {
 Pide un número al usuario y, usando un while, cuenta regresivamente hasta 0. Si el número es menor que 0, muestra "Número no válido".
 */
 
-let numero=parseInt(prompt("Ingrese un número entero positivo para el contador regresivo:"));
-while (numero >= 0) {
-    alert(numero);
+function contadorRegresivo() {
+    let numero = parseInt(prompt("Ingrese un número entero positivo para el contador regresivo:"));
+    if (isNaN(numero) || numero < 0) {
+        document.getElementById("resultado4").innerHTML =
+            `<p>Número no válido.</p>`;
+        return;
+    }
+    let resultado = "";
+    while (numero >= 0) {
+        resultado += numero + " ";
+        numero--;
+    }
     document.getElementById("resultado4").innerHTML =
-        `<p>Contador regresivo: ${numero}</p>`;
+        `<p>Contador regresivo: ${resultado.trim()}</p>`;
 }
 
 /*
@@ -100,9 +109,9 @@ function sumarHastaCero() {
         }
     } while (numero !== 0); 
     document.getElementById("resultado6").innerHTML =
-        `<p>Total acumulado: ${suma}</p><p>Números ingresados: ${sumaAcumulada.join(", ")}</p>`;+
+        `<p>Total acumulado: ${suma}</p><p>Números ingresados: ${sumaAcumulada.join(", ")}</p>`;
 
-}
+  }
 /*
 ✅ Ejercicio 7: Mostrar letras de una palabra
 Pide al usuario una palabra y usa un for para mostrar cada letra por separado en el HTML.
