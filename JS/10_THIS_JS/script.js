@@ -12,7 +12,10 @@ if (loginBtn.textContent === 'Login') {
 const likeButtons = document.querySelectorAll('.like-btn');
 likeButtons.forEach(button => {
 button.addEventListener('click', function () {
-    alert("Ninja was liked");
+    let likes = parseInt(button.getAttribute('data-likes'), 10);
+    likes++;
+    button.setAttribute('data-likes', likes);
+    button.textContent = `${likes} likes`;
 });
 });
 
