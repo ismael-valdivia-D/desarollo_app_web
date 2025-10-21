@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
   cityLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      alert('Loading weather report...');
+      alert('Cargando informe meteorológico…');
     });
   });
 
