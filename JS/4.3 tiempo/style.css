@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;  /* Cambiado a Arial */
+}
+
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #9FC5F8;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#current-city {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.temp-selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.temp-selector label {
+    font-size: 1em;
+    color: #333;
+}
+
+#temp-unit {
+    padding: 2px 5px;
+    border: 1px solid #999;
+}
+
+.forecast-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.day-card {
+    flex: 1;
+    background-color: #EEEEEE;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #999;  /* Añadido borde */
+}
+
+.day-card h3 {
+    font-size: 1.3em;  /* Ajustado tamaño */
+    margin-bottom: 15px;
+    font-weight: normal;  /* Peso de fuente normal */
+}
+
+.day-card img {
+    width: 180px;  /* Aumentado de 45px a 65px */
+    height: 180px;  /* Aumentado de 45px a 65px */
+    margin: 10px 0;
+    background-color: #EEEEEE;  /* Mismo color que el fondo */
+    padding: 10px;
+    border-radius: 50%;  /* Hace la imagen circular */
+    
+}
+
+.day-card p:not(.temp-high):not(.temp-low) {
+    color: #666;  /* Color más claro */
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.temp-high {
+    color: #CF2A27;
+    font-size: 1.4em;  /* Aumentado tamaño */
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.temp-low {
+    color: #2B78E4;
+    font-size: 1.4em;  /* Aumentado tamaño */
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 81%;
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+#cookie-banner img {
+    width: 80px;
+    height: 80px;
+}
+
+#accept-cookies {
+    background-color: #9FC5F8;
+    border: 2px solid black;
+    padding: 5px 20px;
+    box-shadow: 2px 2px black;
+    cursor: pointer;
+    white-space: nowrap;
+}

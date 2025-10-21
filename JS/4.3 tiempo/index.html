@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DojoWeather</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DojoWeather</h1>
+    <nav>
+      <ul>
+        <li><a href="#" class="city-link">Burbank</a></li>
+        <li><a href="#" class="city-link">Chicago</a></li>
+        <li><a href="#" class="city-link">Dallas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="weather-container">
+      <h2 id="current-city">San Jose</h2>
+
+      <div class="temp-selector">
+        <label for="temp-unit">show temperature in</label>
+        <select id="temp-unit">
+          <option value="C">°C</option>
+          <option value="F">°F</option>
+        </select>
+      </div>
+
+      <div class="forecast-grid">
+        <div class="day-card">
+          <h3>Today</h3>
+          <!-- Usar assets/some-rain.png -->
+          <img src="img/some_rain.png" alt="rain">
+          <p>some rain</p>
+          <p class="temp-high">24°</p>
+          <p class="temp-low">18°</p>
+        </div>
+        <div class="day-card">
+          <h3>Tomorrow</h3>
+          <!-- Usar assets/some-sun.png -->
+          <img src= "img/some_sun.png" alt="sun">
+          <p>some sun</p>
+          <p class="temp-high">27°</p>
+          <p class="temp-low">19°</p>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <!-- Usar assets/some-clouds.png -->
+          <img src="img/some_clouds.png" alt="clouds">
+          <p>some clouds</p>
+          <p class="temp-high">21°</p>
+          <p class="temp-low">16°</p>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <!-- Usar assets/some-sun.png -->
+          <img src="img/some_sun.png" alt="sun">
+          <p>some sun</p>
+          <p class="temp-high">26°</p>
+          <p class="temp-low">21°</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cookie Policy Banner -->
+  <div id="cookie-banner">
+    <img src="img/cookie.png" alt="Cookie">
+    <div>
+      <strong>Stop! Cookie time</strong><br>
+      We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a>
+    </div>
+    <button id="accept-cookies">I Accept</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
